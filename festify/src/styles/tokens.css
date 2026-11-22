@@ -1,0 +1,127 @@
+/* =========================================================
+   Festify Design Tokens
+   Identitas: "poster di dinding kota" — krem hangat, tinta gelap,
+   aksen gradien magenta → coral → amber dari logo gelombang.
+   ========================================================= */
+:root {
+  /* ---- Brand ---- */
+  --c-plum-900: #2a0a45;
+  --c-plum-800: #3d0f63;
+  --c-plum-700: #520f86;
+  --c-plum-600: #6a0dad; /* primary */
+  --c-plum-500: #8433cc;
+  --c-plum-100: #efe3fb;
+  --c-plum-50: #f8f1fe;
+
+  --c-magenta-500: #be3496;
+  --c-magenta-100: #fbe3f2;
+  --c-coral-500: #f43f5e;
+  --c-coral-600: #d92d4c;
+  --c-coral-100: #ffe4e9;
+  --c-amber-400: #ffa94d;
+  --c-amber-500: #f28c1c;
+  --c-amber-100: #fff0dc;
+
+  /* ---- Neutral (hangat) ---- */
+  --c-ink-900: #1c1326;   /* teks utama */
+  --c-ink-700: #3e3449;
+  --c-ink-500: #6f6578;   /* teks sekunder */
+  --c-ink-400: #958c9d;
+  --c-ink-300: #c9c1cf;
+  --c-ink-200: #e7e0e6;
+  --c-ink-100: #f2ece9;
+  --c-paper: #fff8f4;     /* latar halaman */
+  --c-white: #ffffff;
+
+  /* ---- Semantic ---- */
+  --c-success-600: #15803d;
+  --c-success-100: #dcfce7;
+  --c-warning-600: #b45309;
+  --c-warning-100: #fef3c7;
+  --c-danger-600: #c81e3a;
+  --c-danger-100: #ffe4e8;
+  --c-info-600: #1d4ed8;
+  --c-info-100: #dbeafe;
+
+  /* ---- Alias ---- */
+  --bg: var(--c-paper);
+  --surface: var(--c-white);
+  --surface-sunken: var(--c-ink-100);
+  --text: var(--c-ink-900);
+  --text-muted: var(--c-ink-500);
+  --text-subtle: var(--c-ink-400);
+  --border: var(--c-ink-200);
+  --border-strong: var(--c-ink-300);
+  --primary: var(--c-plum-600);
+  --primary-hover: var(--c-plum-700);
+  --primary-soft: var(--c-plum-50);
+  --accent: var(--c-coral-500);
+  --focus-ring: 0 0 0 3px rgba(132, 51, 204, 0.35);
+
+  --gradient-brand: linear-gradient(120deg, #be3496 0%, #f43f5e 52%, #ffa94d 100%);
+  --gradient-plum: linear-gradient(135deg, #6a0dad 0%, #be3496 100%);
+  --gradient-mesh:
+    radial-gradient(42% 46% at 14% 18%, rgba(190, 52, 150, 0.55) 0%, rgba(190, 52, 150, 0) 70%),
+    radial-gradient(38% 42% at 52% 58%, rgba(255, 169, 77, 0.55) 0%, rgba(255, 169, 77, 0) 72%),
+    radial-gradient(46% 44% at 92% 92%, rgba(244, 63, 94, 0.6) 0%, rgba(244, 63, 94, 0) 72%),
+    var(--c-paper);
+
+  /* ---- Typography ---- */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --fs-xs: 0.75rem;    /* 12 */
+  --fs-sm: 0.875rem;   /* 14 */
+  --fs-md: 1rem;       /* 16 */
+  --fs-lg: 1.125rem;   /* 18 */
+  --fs-xl: 1.375rem;   /* 22 */
+  --fs-2xl: 1.75rem;   /* 28 */
+  --fs-3xl: 2.25rem;   /* 36 */
+  --fs-4xl: clamp(2.25rem, 1.4rem + 3.4vw, 4rem);
+
+  --lh-tight: 1.15;
+  --lh-snug: 1.35;
+  --lh-body: 1.6;
+
+  /* ---- Spacing (skala 4px) ---- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+
+  /* ---- Radius ---- */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 26px;
+  --r-pill: 999px;
+
+  /* ---- Shadow ---- */
+  --sh-sm: 0 1px 2px rgba(42, 10, 69, 0.06);
+  --sh-md: 0 8px 24px -14px rgba(42, 10, 69, 0.28);
+  --sh-lg: 0 24px 48px -24px rgba(42, 10, 69, 0.38);
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.22, 0.8, 0.3, 1);
+  --dur-fast: 140ms;
+  --dur: 220ms;
+
+  /* ---- Layout ---- */
+  --container: 1200px;
+  --nav-h: 68px;
+  --sidebar-w: 256px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur: 0ms;
+  }
+}
